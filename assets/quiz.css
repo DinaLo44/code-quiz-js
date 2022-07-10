@@ -1,0 +1,96 @@
+body {
+    color:white;
+    background-color: midnightblue;
+}
+
+#display {
+    display:flex;
+    
+}
+
+#timer-display {
+    background-color:yellowgreen;
+    margin-right:auto;
+    padding: 10px;
+    width:auto;
+    font-size: 30px;
+    color:white;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 25px;
+    border-radius: 15px;
+}
+
+
+#highscores-button {
+    background-color:darkorange;
+    
+}
+
+#score-button {
+    background-color:yellowgreen;
+    margin-left:auto;
+    padding: 10px;
+    width:auto;
+    font-size: 30px;
+    color:white;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 25px;
+    border-radius: 15px;
+}
+
+#score-counter {
+    background-color: yellowgreen;
+    margin-left:10px;
+    padding: 10px;
+    width:auto;
+    font-size: 30px;
+    color:white;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 25px;
+    border-radius: 15px;
+}
+
+
+.options-container {
+    display:flex;
+    margin-bottom: 20px;
+    padding: 10px;
+    width:100%;
+    border-radius: 15px;
+    background-color: yellowgreen;
+    
+}
+
+.options-container:hover {
+    box-shadow: 10px 10px 10px 0px white;
+    cursor:pointer;
+    transition:transform 200ms;
+    transform: scale(1.05);
+}
+
+.options-prefix {
+    padding-right: 15px;
+}
+
+
+.correct {
+    background-color:linear-gradient(32deg, lightblue, 100%);
+}
+
+.incorrect {
+    background-color: linear-gradient(32deg, red, 100% );
+}
+
+
+
+@media screen and (max-width:768px) {
+    .options-container {
+        min-width:fit-content;
+    }
+}
