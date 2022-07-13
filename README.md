@@ -18,4 +18,4 @@ Here are some screenshots of the final application:
 
 Here is the link of the deployed application:
 
-
+ https://dinalo44.github.io/code-quiz-js/
