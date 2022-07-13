@@ -41,19 +41,6 @@ h2 {
     align-items:center;
 }
 
-/* .justify-center {
-    justify-content: center;
-}
-
-.text-center {
-    text-align: center;
-    
-}
-
-.hidden {
-    display:none;
-} */
-
 .button {
     padding: 10px;
     width:auto;
@@ -75,9 +62,5 @@ h2 {
     transform: scale(1.05);
 }
 
-/* .button[disabled]:hover {
-    cursor:not-allowed;
-    box-shadow: none;
-    transform: none;
-} */
+
 
