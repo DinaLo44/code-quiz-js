@@ -1,3 +1,5 @@
+
+//Variables in the global scope
 var interval;
 var question = document.querySelector('#question');
 var score = document.querySelector('#score-counter');
@@ -10,6 +12,8 @@ var timeLeft = 60;
 var questionCounter = 0;
 var allQuestions = [];
 var finalScores = JSON.parse(localStorage.getItem('finalScores')) || []
+
+//This variable holds all the questions and correct answers
 var questions = [
     {
         question: 'What is the keyword used to pop up a message to a user?',
@@ -38,9 +42,7 @@ var questions = [
     },
 ]
 
-var totalScoredPoints = 100;
-var maxNumQuestions = 5;
-
+//This function starts the quiz with the first questions, score "0" and timer starts
 function startQuiz() {
     score = 0;
     questionCounter = 0;
@@ -48,6 +50,7 @@ function startQuiz() {
     startTimer()
 }
 
+//This function allows the application to show the next question after the user provides an answer to the current question
 function getNewQuestion() {
 
     var currentQuestion = questions[questionCounter]
@@ -70,6 +73,7 @@ function getNewQuestion() {
 
 }
 
+//This function creates the input field for the user to submit its initials
 function submitFormHandler(event) {
     var inputEl = document.getElementsByTagName('input')[0]
     console.log(inputEl.value)
@@ -81,6 +85,7 @@ function submitFormHandler(event) {
     localStorage.setItem('finalScores', JSON.stringify(finalScores))
 }
 
+//This functions sets up the functionality of the application depending on the answer provided by the user
 function answerHandler(event) {
     if (event.target.matches('button')) {
         submitFormHandler(event)
@@ -98,7 +103,7 @@ function answerHandler(event) {
 
         questionCounter++
         
-        //If else for either ending the game or bringing new question
+        //This conditional statement is for either ending the game or bringing new question
         if (questionCounter === questions.length) {
             endQuiz();
         } else {
@@ -108,6 +113,7 @@ function answerHandler(event) {
     }
 }
 
+//This function allows the quiz to end
 function endQuiz() {
     clearInterval(interval)
     answersEl.innerHTML = ''
@@ -115,6 +121,7 @@ function endQuiz() {
     creatingInitials()
 }
 
+//This function creates the input element and the submit button
 function creatingInitials() {
     var inputEl = document.createElement('input')
     inputEl.setAttribute('type', 'text')
@@ -124,6 +131,7 @@ function creatingInitials() {
     answersEl.append(inputEl, submitBtn)
 }
 
+//This function allows the timer to start counting down and ask it to stop once the user has finished with the quiz
 function startTimer() {
     interval = setInterval(function () {
         timeLeft--
@@ -134,5 +142,7 @@ function startTimer() {
     }, 1000)
 }
 
+//This allows the user to click on the chosen answer
 answersEl.addEventListener('click', answerHandler)
+//The function to start the quiz
 startQuiz()

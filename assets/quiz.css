@@ -44,16 +44,6 @@ body {
 }
 
 
-.correct {
-    background-color: linear-gradient(32deg, lightblue, 100%);
-}
-
-.incorrect {
-    background-color: linear-gradient(32deg, red, 100%);
-}
-
-
-
 @media screen and (max-width:768px) {
     .options-container {
         min-width: fit-content;
